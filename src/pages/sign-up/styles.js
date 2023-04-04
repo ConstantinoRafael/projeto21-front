@@ -9,6 +9,7 @@ export const FormStyle = styled.form`
   a {
     text-decoration: none;
     color: #fff;
+    font-weight: 700;
 
     &:hover {
       color: #aaa;

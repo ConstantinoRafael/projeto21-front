@@ -16,7 +16,7 @@ export default function SignUp() {
           <input placeholder="email"></input>
           <input placeholder="senha"></input>
           <input placeholder="confirme a senha"></input>
-          <button>Entrar</button>
+          <button>Cadastrar</button>
           <p>
             Já é de casa? <Link href="/sign-in">Entre!</Link>
           </p>
