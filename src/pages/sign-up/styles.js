@@ -4,15 +4,15 @@ export const FormStyle = styled.form`
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: #fff;
+  color: #000;
 
   a {
     text-decoration: none;
-    color: #fff;
+    color: #000;
     font-weight: 700;
 
     &:hover {
-      color: #aaa;
+      color: #ff6363;
     }
   }
 
@@ -26,12 +26,13 @@ export const FormStyle = styled.form`
     font-size: 15px;
     margin-bottom: 15px;
     border: none;
+    background-color: #fff;
   }
 
   button {
-    width: 350px;
+    width: 250px;
     height: 50px;
-    background-color: #f35f40;
+    background-color: #ff6363;
     border-radius: 7px;
     border: none;
     color: #fff;
@@ -51,7 +52,6 @@ export const SignInContainer = styled.div`
 `;
 
 export const Container = styled.div`
-  background-color: #1C1C1C;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -68,7 +68,12 @@ export const LogoContainer = styled.div`
   align-items: center;
 
   p{
-    color: #fff;
-    font-size: 20px;
+    color: #000;
+    font-size: 15px;
+  }
+
+  h1 {
+    color: #ff6363;
+    margin-bottom: 30px;
   }
 `;

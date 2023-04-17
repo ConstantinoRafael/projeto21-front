@@ -8,9 +8,8 @@ export default function SignUp() {
     <SignInContainer>
       <Container>
         <LogoContainer>
-          <Image src={logo} alt="logo da imagem" />
-          <p>Encontre o músico que precisa</p> <br></br>
-          <p>ou seja encontrado!</p>
+          <h1>todo músico</h1>
+          <p>Encontre o músico que precisa!</p> <br></br>
         </LogoContainer>
         <FormStyle>
           <input placeholder="email"></input>

@@ -1,12 +1,18 @@
 import Link from "next/link";
-import { NavBarStyle } from "./styles";
+import { Button, NavBarStyle } from "./styles";
 
 export default function NavBar({ children }) {
   return (
     <NavBarStyle>
-      <h1>Music-4ll</h1>
-      <Link href="/sign-in">Cadastrar</Link>
-      <Link href="/sign-up">Entrar</Link>
+      <h1>todo músico</h1>
+      <div>
+        <Link href="/sign-in">
+          <Button>Cadastrar</Button>
+        </Link>
+        <Link href="/sign-up">
+          <Button>Entrar</Button>
+        </Link>
+      </div>
     </NavBarStyle>
   );
 }
