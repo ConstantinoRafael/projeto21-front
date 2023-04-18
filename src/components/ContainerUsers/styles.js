@@ -5,6 +5,7 @@ export const ContainerUsersStyle = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 40px
 `;
 
 export const ContainerEachUser = styled.div`
@@ -23,5 +24,10 @@ export const ContainerEachUser = styled.div`
     height: 180px;
     border-radius: 20px;
   
+  }
+  
+  a {
+    text-decoration: none;
+    color: #000;
   }
 `;

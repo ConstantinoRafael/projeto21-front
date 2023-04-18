@@ -30,7 +30,7 @@ export const FormStyle = styled.form`
   }
 
   button {
-    width: 350px;
+    width: 250px;
     height: 50px;
     background-color: #ff6363;
     border-radius: 7px;

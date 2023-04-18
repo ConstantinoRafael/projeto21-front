@@ -6,11 +6,12 @@ import { useState } from "react";
 import api from "@/services/api";
 import axios from "axios";
 import { toast } from "react-toastify";
+import { useRouter } from "next/router";
 
 export default function SignIn() {
   const [email, setEmail] = useState(undefined);
   const [password, setPassword] = useState(undefined);
-
+  const router = useRouter();
   async function sendData(e) {
     e.preventDefault();
 
@@ -19,35 +20,14 @@ export default function SignIn() {
       password: password.toString(),
     };
 
-    try {
-      toast.success('Você entrou!', {
-        position: "top-right",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "colored",
-        });
-      const users = await axios.post(
-        "http://localhost:5000/auth/sign-in",
-        body
-      );
+    const promise = axios.post("http://localhost:5000/auth/sign-in", body);
 
-      console.log("deu booom");
-    } catch (err) {
-      return toast.error("Usuário não encontrado!", {
-        position: "top-right",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "colored",
-      });
-    }
+    promise.then(() => {
+      alert("Login realizado com sucesso!");
+      router.push("/");
+    });
+
+    promise.catch((err) => console.log(err));
   }
   return (
     <SignInContainer>

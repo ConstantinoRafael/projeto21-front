@@ -2,20 +2,25 @@ import { ContainerEachUser, ContainerUsersStyle } from "./styles";
 import none from "../../../public/images/profilenone.jpg";
 import Image from "next/image";
 import Link from "next/link";
+import { AiOutlineInstagram } from "react-icons/ai";
 
 export default function ContainerUsers({ users }) {
+  console.log(users);
+
   return (
     <ContainerUsersStyle>
       {users?.map((u) => (
         <ContainerEachUser key={u.id}>
-          {u.Enrrolment[0].urlProfile === "none" ? (
+          {u.urlProfile === "none" ? (
             <Image src={none} alt="sem foto de perfil"></Image>
           ) : (
-            <img src={u.Enrrolment[0].urlProfile} alt="foto de perfil"></img>
+            <img src={u.urlProfile} alt="foto de perfil"></img>
           )}
-          <h2>{u.Enrrolment[0].name}</h2>
-          <a href={`https://www.instagram.com/${u.Enrrolment[0].instagram.substring(1)}`}>
-            {u.Enrrolment[0].instagram}
+          <h2>{u.name}</h2>
+          <a href={`https://www.instagram.com/${u.instagram.substring(1)}`}>
+            <AiOutlineInstagram />
+            <span> </span>
+            {u.instagram.substring(1)}
           </a>
         </ContainerEachUser>
       ))}

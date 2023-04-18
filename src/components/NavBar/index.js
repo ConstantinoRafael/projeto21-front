@@ -6,10 +6,10 @@ export default function NavBar({ children }) {
     <NavBarStyle>
       <h1>todo músico</h1>
       <div>
-        <Link href="/sign-in">
+        <Link href="/sign-up">
           <Button>Cadastrar</Button>
         </Link>
-        <Link href="/sign-up">
+        <Link href="/sign-in">
           <Button>Entrar</Button>
         </Link>
       </div>

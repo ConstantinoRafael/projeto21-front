@@ -18,7 +18,7 @@ export const Button = styled.button`
   width: 200px;
   height: 40px;
   border: none;
-  border-radius: 10px;
+  border-radius: 20px;
   background-color: #ff6363;
   color: #fff;
   font-weight: 700;

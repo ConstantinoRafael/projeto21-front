@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <MainContainer>
       <Head>
-        <title>Music-4ll</title>
+        <title>todo músico</title>
         <meta name="keywords" content="músicos, cantores, disponíveis"></meta>
         <meta
           name="description"

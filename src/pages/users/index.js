@@ -9,9 +9,11 @@ export default function Users() {
   const [users, setUsers] = useState(undefined);
 
   useEffect(() => {
-    const promise = axios.get("http://localhost:5000/users");
+    const promise = axios.get("http://localhost:5000/enrollments");
 
     promise.then((res) => setUsers(res.data));
+
+    promise.catch((err) => console.log(err.response.data))
   }, []);
   return (
     <>
